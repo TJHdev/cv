@@ -1,4 +1,6 @@
 ---
+import Deel from "@src/images/workexperience/deel_logo.jpg";
+import Chep from "@src/images/workexperience/chep_logo.jpg";
 import Enhance from "@src/images/workexperience/enhance.png";
 import Superbet from "@src/images/workexperience/superbet.webp";
 import Webdev from "@src/images/workexperience/webdev.jpg";
@@ -8,6 +10,16 @@ import Header from "./Header.astro";
 import HorizontalRule from "./HorizontalRule.astro";
 
 const workExperienceData: { title: string; text: string; imgPath: string }[] = [
+  {
+    title: "Deel",
+    text: "Supported region-specific payroll and leave logic on the time-off team. Audited a 4M+ LoC TypeScript codebase to eliminate type-level bottlenecks, including rewriting a recursive type that hung the language server for ~14 minutes, this drastically improved CI speeds and developer velocity. Also prototyped a cross-stack type-sharing layer, established frontend testing best practices, implemented compliance logic for multiple countries, and resolved critical rendering bugs in the shared UI library.",
+    imgPath: Deel.src,
+  },
+  {
+    title: "Chep",
+    text: "Drove the architectural migration of a legacy Backbone app into a modern React, TypeScript, and Material-UI codebase. Shaped core strategies for data fetching, routing, and localization, while implementing an OpenAPI client for end-to-end type safety. Migrated the user permissions system into reusable components, established robust Cypress test coverage, and optimized perceived performance using router-integrated data prefetching.",
+    imgPath: Chep.src,
+  },
   {
     title: "Enhance",
     text: "Worked on improving a complex customer-facing web hosting control panel, implementing new features and improving performance using TypeScript, React, and Redux. Spearheaded key initiatives including migrating to react-query, rewriting enhance.com from WordPress to Astro for better performance, and implementing an extensive end-to-end test suite with Playwright. Developed new frontend features, fixed numerous bugs, and ensured consistency across the app's UI and UX.",
@@ -27,11 +39,6 @@ const workExperienceData: { title: string; text: string; imgPath: string }[] = [
     title: "Engie",
     text: "My job title at Engie was Mechanical Design Engineer on a combined heating and power station. This position required strong problem-solving skills in order to understand how the existing mechanical systems worked for integration of new equipment. Frequent communcation with multiple stake holders was required to keep the project moving forward, this greatly improved my project management and people skills.",
     imgPath: Engie.src,
-  },
-  {
-    title: "Applied Drilling Technology International",
-    text: "Immediately after graduating I started work as a Trainee Drilling Engineer. The work environment and shift pattern were challenging. However, this instilled a strong work ethic and the experience gained working in a team were invaluable. Unfortunately ADTI was liquidated during the oil price crash in 2015.",
-    imgPath: Adti.src,
   },
 ];
 ---
