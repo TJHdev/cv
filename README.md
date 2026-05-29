@@ -1,54 +1,55 @@
-# Astro Starter Kit: Basics
+# Thomas Hanna — CV
 
-```sh
-npm create astro@latest -- --template basics
-```
+A personal portfolio and CV site for Thomas Hanna, a frontend developer with 8 years of experience building responsive, user-focused web applications.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Built as a static site with [Astro](https://astro.build), styled with [Tailwind CSS](https://tailwindcss.com), and deployed to GitHub Pages.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **About me** — profile photo and professional summary
+- **Skills** — interactive cards covering TypeScript, React, Astro, Tailwind CSS, Playwright, and more
+- **Experience** — work history from Deel, Chep, Enhance, Superbet, and earlier roles
+- **Footer** — links to GitHub, LinkedIn, and email
 
-## 🚀 Project Structure
+## Tech stack
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Astro](https://astro.build) — static site generation
+- [Tailwind CSS](https://tailwindcss.com) — utility-first styling
+- [astro-icon](https://github.com/natemoo-re/astro-icon) — SVG icon integration
+- [astro-compressor](https://github.com/astro-community/astro-compressor) — asset compression at build time
+
+## Project structure
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/              # Static assets (favicon, logo)
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── components/      # Astro components (AboutMe, Skills, Experience, etc.)
+│   ├── icons/           # Skill and social SVG icons
+│   ├── images/          # Profile photo, background, and employer logos
+│   ├── layouts/         # Page layout wrapper
+│   └── pages/           # Site routes (index.astro)
+├── .github/workflows/   # GitHub Pages deployment
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Install dependencies and start the local dev server:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```sh
+npm install
+npm run dev
+```
 
-## 🧞 Commands
+The site runs at `http://localhost:4321`.
 
-All commands are run from the root of the project, from a terminal:
+| Command           | Action                                      |
+| :---------------- | :------------------------------------------ |
+| `npm run dev`     | Start the local dev server                  |
+| `npm run build`   | Build the production site to `./dist/`      |
+| `npm run preview` | Preview the production build locally        |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Deployment
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Pushes to the `main` branch trigger a GitHub Actions workflow that builds the site and deploys it to GitHub Pages.
